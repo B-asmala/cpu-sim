@@ -1,0 +1,16 @@
+Start: 	CLR1
+		read
+		LOAD0
+		read
+		jump Loop
+
+
+Done:	MOV1toACC
+		write
+		stop
+
+
+Loop:	jmpz	Done
+		DECACC
+		ADD0t1
+		jump 	Loop
