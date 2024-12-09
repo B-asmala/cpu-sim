@@ -1,16 +1,10 @@
-Start: 	CLR1
-		read
-		LOAD0
-		read
-		jump Loop
+Start:	read		; read input1 -> acc
+        LOAD0         ; load from acc to R0
+        read           ; read input2 ->acc
+        MUL            ; multiply R0*ac
+        write
+        
 
+        
 
-Done:	MOV1toACC
-		write
-		stop
-
-
-Loop:	jmpz	Done
-		DECACC
-		ADD0t1
-		jump 	Loop
+sum:	.data 2 0 ; 2-byte location where sum is stored
